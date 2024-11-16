@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# tambem pode usar 'python' diretamente no terminal para executar o interpretador
+# isso equivale ao irb ou rails c
+
+
+
+import turtle
+bob = turtle.Turtle()
+bob.fd(100)
+bob.lt(90)
+bob.fd(100)
+bob.lt(90)
+bob.fd(100)
+bob.lt(90)
+bob.fd(100)
+
+print(bob)
+for i in range(4):
+    print('Hello!')
+turtle.mainloop()

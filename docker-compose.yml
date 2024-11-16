@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  py:
+    container_name: py
+    #command: bash -c "/usr/local/bin/python3.14 -m ensurepip --upgrade && pip install -r /app/requirements.txt && chmod +x /app/teste && sleep infinity"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/config/app
+      - pip:/usr/local/lib/python3.14/site-packages
+    working_dir: /config/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+
+volumes:
+  pip:
